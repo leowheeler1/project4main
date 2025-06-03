@@ -13,11 +13,11 @@ def binner(scores):
     for score in scores:
         if score > 900:
             output.append(1)
-        elif score > 650:
+        elif score > 675:
             output.append(2)
-        elif score > 400:
+        elif score > 375:
             output.append(3)
-        elif score > 200:
+        elif score > 100:
             output.append(4)
         else:
             output.append(5)
