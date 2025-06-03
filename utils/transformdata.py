@@ -1,5 +1,6 @@
 #Import dependencies
 import pandas as pd
+import pickle
 from pathlib import Path
 from sklearn.feature_extraction.text import CountVectorizer , TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -38,3 +39,7 @@ y = data["Label"]
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+
+with open("vectorizer.pkl", "wb") as f:
+    pickle.dump(vectorizer, f)

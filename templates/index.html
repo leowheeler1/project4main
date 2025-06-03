@@ -2,22 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Symptom Severity Classifier</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Symptom Severity Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Symptom Severity Classifier</h1>
-        <form action="/predict" method="POST">
-            <textarea name="user_input" placeholder="Enter symptoms..."></textarea>
-            <button type="submit">Run Module</button>
-        </form>
-        {% if prediction %}
-        <div class="result">
-            <h2>Predicted Severity:</h2>
-            <p>{{ prediction }}</p>
-        </div>
-        {% endif %}
+        <h1>Symptom Severity Checker</h1>
+        <textarea id="symptomInput" placeholder="Describe your symptoms here..."></textarea>
+        <button onclick="submitSymptoms()">Run Module</button>
+
+        <div id="result" class="result-box"></div>
     </div>
+
+    <script>
+        function submitSymptoms() {
+            const text = document.getElementById("symptomInput").value;
+
+            fetch("/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ text }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.prediction !== undefined) {
+                    document.getElementById("result").innerText = "Result: " + data.prediction;
+                } else {
+                    document.getElementById("result").innerText = "Error: " + data.error;
+                }
+            })
+            .catch(error => {
+                document.getElementById("result").innerText = "Something went wrong.";
+                console.error("Error:", error);
+            });
+        }
+    </script>
 </body>
 </html>
