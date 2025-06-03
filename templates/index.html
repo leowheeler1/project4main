@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symptom Severity Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Symptom Severity Classifier</h1>
+        <form action="/predict" method="POST">
+            <textarea name="user_input" placeholder="Enter symptoms..."></textarea>
+            <button type="submit">Run Module</button>
+        </form>
+        {% if prediction %}
+        <div class="result">
+            <h2>Predicted Severity:</h2>
+            <p>{{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
