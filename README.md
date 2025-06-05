@@ -14,7 +14,14 @@
 #### [11. app.py](app.py) - Flask app that runs the whole chatbot
 
 ## Project Overview
-  
+This project was to develop a chatbot that would take in symptoms from users and return a suggestion for approaching the symptoms. **This chatbot does *not* give medical advice. Please see a professional if you are having serious health concerns.** The goal of this chatbot is to help users decide on the urgency of medical scenarios. If symptoms are mild, and not indicitave of deeper, more serious issues, the bot may reccomend some rest and water. If the symptoms relate to dire situations, like apendicitis, the chatbot would encourage you to immediate leave for the emergency room. 
+
+### Model Choice
+Several different models were tested for this project. `XGBoost`, `Random Forest`, and `Deep Neural Network` all made the list, but the `Random Forest` outperformed all other models in consistency and accuracy. The other tested models can be found in [mlmodels](mlmodels). The model typically performs around `87-88%` accuracy. 
+
+### Model Training
+All models went through rigorous training processes. `XGBoost` and `Random Forset` were tuned with custom tuning functions (seen in [here](mlmodels/trees.ipynb)) and both showed a similar result: more estimators led to a more accurate model. However, this seemed to plataeu around `200`, so in an effort to save on power, `200` was chosen as the ideal parameter for the number of estimators. The `Deep Neural Network` was tuned using the `Keras Tuner` (as seen [here](tensorflowfolder/tensorflow.ipynb)). This tuning acheived a peak accuracy of about `87%`. All of the models were close, but the `Random Forest` remained most consistent, and became the model of choice. 
+
 ## Instructions for Use
 ### Cloning Repo
 The first step to using this app is to clone the repo locally. Click the green `Code` button and then copy the link.
