@@ -5,7 +5,7 @@
 ## Repo Directory
 #### [1. Datasets](datasets) - `.csv` files that were used to populate relational database and train ML models
 #### [2. Images](images) - all images and gifs used in readme
-#### [3. MLmodels](mlmodels) - all variations of model that were tested. trained models can be found here as well. 
+#### [3. MLmodels](mlmodels) - all variations of model that were tested. trained models can be found here as well
 #### [4. Prelim_Checks](prelim_checks) - preliminary testing to see if the idea was even possible
 #### [5. Schema](schema) - setup for relational database
 #### [6. Static](static) - `.css` file
