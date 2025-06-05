@@ -1,5 +1,7 @@
 # Health Resource Chatbot
 
+#  **This chatbot does *not* give medical advice. Please see a professional if you are having serious health concerns.**
+
 ## Repo Directory
 #### [1. Datasets](datasets) - `.csv` files that were used to populate relational database and train ML models
 #### [2. Images](images) - all images and gifs used in readme
@@ -14,7 +16,7 @@
 #### [11. app.py](app.py) - Flask app that runs the whole chatbot
 
 ## Project Overview
-This project was to develop a chatbot that would take in symptoms from users and return a suggestion for approaching the symptoms. **This chatbot does *not* give medical advice. Please see a professional if you are having serious health concerns.** The goal of this chatbot is to help users decide on the urgency of medical scenarios. If symptoms are mild, and not indicitave of deeper, more serious issues, the bot may reccomend some rest and water. If the symptoms relate to dire situations, like apendicitis, the chatbot would encourage you to immediate leave for the emergency room. 
+This project was to develop a chatbot that would take in symptoms from users and return a suggestion for approaching the symptoms. The goal of this chatbot is to help users decide on the urgency of medical scenarios. If symptoms are mild, and not indicitave of deeper, more serious issues, the bot may reccomend some rest and water. If the symptoms relate to dire situations, like apendicitis, the chatbot would encourage you to immediate leave for the emergency room. 
 
 ### Model Choice
 Several different models were tested for this project. `XGBoost`, `Random Forest`, and `Deep Neural Network` all made the list, but the `Random Forest` outperformed all other models in consistency and accuracy. The other tested models can be found in [mlmodels](mlmodels). The model typically performs around `87-88%` accuracy. 
