@@ -48,9 +48,10 @@ From there, just type symptoms into the field, and watch as the model gives sugg
 
 
 ## References (Data)
+- `symptom-disease-dataset` from user `dux-tecblic`. Dataset can be found [here.](https://huggingface.co/datasets/dux-tecblic/symptom-disease-dataset)
 
 ## Other References
-
+- [Blue Cross Blue Shield MN](https://www.bluecrossmn.com/find-care/when-visit-urgent-care-emergency-room-or-doctors-office ), used to help determine classes for classification
 
 
 ## Credits
