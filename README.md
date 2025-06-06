@@ -1,6 +1,6 @@
 # Health Resource Chatbot
 
-#  **This chatbot does *not* give medical advice. Please see a professional if you are having serious health concerns.**
+#  **This chatbot does *not* give medical advice, but rather suggestions on how soon you should visit a physician. Please see a professional if you are having serious health concerns.**
 
 ## Repo Directory
 #### [1. Datasets](datasets) - `.csv` files that were used to populate relational database and train ML models
@@ -44,20 +44,20 @@ Then, copy the link and paste it into your browser.
 
 ![app_2](images/app_2.png)
 
-From there, just type symptoms into the field, and watch as the model gives suggestions for treatment!
+From there, just type symptoms into the field, and watch as the model gives its input on how soon you should see a doctor. 
 
 ![demo](images/app_demo.gif)
 
 
 ## References (Data)
-- `symptom-disease-dataset` from user `dux-tecblic` on `HuggingFace.co`. Dataset can be found [here.](https://huggingface.co/datasets/dux-tecblic/symptom-disease-dataset)
+- `symptom-disease-dataset` from user `dux-tecblic` on [HuggingFace.co](huggingface.co). Dataset can be found [here.](https://huggingface.co/datasets/dux-tecblic/symptom-disease-dataset)
 
 ## Other References
 - [Blue Cross Blue Shield MN](https://www.bluecrossmn.com/find-care/when-visit-urgent-care-emergency-room-or-doctors-office ), used to help determine classes for classification
 
 
 ## Credits
+    - Liliana Guevara-Guerrero
     - Leo Wheeler
     - Jacob Brown
-    - Liliana Guevara-Guerrero
     - Connor Beaton
