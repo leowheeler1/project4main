@@ -10,9 +10,10 @@
 #### [5. Schema](schema) - setup for relational database
 #### [6. Static](static) - `.css` file
 #### [7. Templates](templates) - HTML page
-#### [8. Utils](utils) - chatbot and data transforming files
-#### [9. README.md](README.md) - you are here
-#### [10. app.py](app.py) - Flask app that runs the whole chatbot
+#### [8. Tensorflowfolder](tensorflowfolder) - HTML page
+#### [9. Utils](utils) - chatbot and data transforming files
+#### [10. README.md](README.md) - you are here
+#### [11. app.py](app.py) - Flask app that runs the whole chatbot
 
 ## Project Overview
 This project was to develop a chatbot that would take in symptoms from users and return a suggestion for approaching the symptoms. The goal of this chatbot is to help users decide on the urgency of medical scenarios. If symptoms are mild, and not indicitave of deeper, more serious issues, the bot may reccomend some rest and water. If the symptoms relate to dire situations, like apendicitis, the chatbot would encourage you to immediate leave for the emergency room. 
